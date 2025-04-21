@@ -5,13 +5,11 @@ Explanation:
 
 3. qr.pipe(qrCodeStream): Pipes the QR code data into the writable stream, effectively saving it to the file.
 
-4. qrCodeStream.on("finish"): Logs a message to the console once the QR code image has been successfully saved.
+4. fs.writeFile: Writes the user's URL to a file named userInput.txt.
 
-5. fs.writeFile: Writes the user's URL to a file named userInput.txt.
+5. If an error occurs during the file-writing process, it throws an error.
 
-6. If an error occurs during the file-writing process, it throws an error.
-
-7. Logs a success message to the console once the file is saved.
+6. Logs a success message to the console once the file is saved.
 
 SUMMARY
 1. The script prompts the user for a URL.

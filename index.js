@@ -24,10 +24,7 @@ inquirer
     const qrCodePath = "qrCode.png";
     const qrCodeStream = fs.createWriteStream(qrCodePath);
     qrCode.pipe(qrCodeStream); 
-    qrCodeStream.on("finish", () => {
-      console.log(`QR code saved to ${qrCodePath}`);
-    });
-
+    
     // Create file
     fs.writeFile("userInput.txt", answers.url, (error) => {
       if (error) throw error;
